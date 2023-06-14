@@ -1,0 +1,32 @@
+<h1>iric works!</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered border-primary" *ngIf="alumno.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary">Mostrar Imagen</button>
+                        </th>
+                        <th>Matricula</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Pago</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumnos of alumno ">
+                        <th>{{alumnos.matricula}}</th>
+                        <th>{{alumnos.nombre |uppercase}}</th>
+                        <th>{{alumnos.edad}}</th>
+                        <th>{{alumnos.correo}}</th>
+                        <th>{{alumnos.pago |currency}}</th>
+                        <td><img [src]="alumnos.foto"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
