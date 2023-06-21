@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class IricComponent {
 
+  imageWidth:number=50;
+  imageMargin:number=2;
+  muestraImage:boolean=true;
+  listFilter:string='';
+
+  showImagen():void{
+    this.muestraImage=this.muestraImage;
+  }
+
+
   alumno: any[] = [{
     "matricula": 20001510,
     "nombre": "Alexis",
