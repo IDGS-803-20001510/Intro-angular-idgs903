@@ -1,4 +1,3 @@
-<h1>iric works!</h1>
 
 <div class="card">
     <div class="card-header">
@@ -27,11 +26,11 @@
                             <th>Edad</th>
                             <th>Correo</th>
                             <th>Pago</th>
-                            <th>Foto</th>
+                            <th>Calificación</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let alumnos of alumno ">
+                        <tr *ngFor="let alumnos of alumno | alumnosFilter:listFilter ">
                             <td><img *ngIf="muestraImage" [src]="alumnos.foto" [title]="alumnos.nombre" [style.width.px]="imageWidth"
                                     [style.margin.px]="imageMargin">
                             </td>
@@ -40,6 +39,7 @@
                             <th>{{alumnos.edad}}</th>
                             <th>{{alumnos.correo}}</th>
                             <th>{{alumnos.pago |currency}}</th>
+                            <th>8</th>
                         </tr>
                     </tbody>
                 </table>
